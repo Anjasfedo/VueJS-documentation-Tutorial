@@ -18,14 +18,15 @@ async function fetchData() {
 
 fetchData()
   
-watch(todoId, async(newTodo) => {
-  // yes, console.log() is a side effect
-  todoData.value = null
-  const res = await fetch(
-    `https://jsonplaceholder.typicode.com/todos/${todoId.value}`
-  )
-  todoData.value = await res.json()
-})
+// watch(todoId, async(newTodo) => {
+//   // yes, console.log() is a side effect
+//   todoData.value = null
+//   const res = await fetch(
+//     `https://jsonplaceholder.typicode.com/todos/${todoId.value}`
+//   )
+//   todoData.value = await res.json()
+// })
+watch(todoId, fetchData)
 </script>
 
 <template>
