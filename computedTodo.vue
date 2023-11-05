@@ -13,7 +13,8 @@ const todos = ref([
 
 const filteredTodos = computed(() => {
   // return filtered todos based on
-  return hideCompleted.value ? todos.value.filter(ele => !ele.done) : todos.value.filter(ele => ele.done)
+  // return hideCompleted.value ? todos.value.filter(ele => !ele.done) : todos.value.filter(ele => ele.done)
+  return hideCompleted.value ? todos.value.filter(ele => !ele.done) : todos.value
   // `todos.value` & `hideCompleted.value`
 })
 
